@@ -36,6 +36,7 @@ install(DIRECTORY include/ DESTINATION include)
 install(DIRECTORY urdf DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY arduino DESTINATION share/${PROJECT_NAME})
 
 install(TARGETS servo_moteur
   EXPORT export_servo_moteur
