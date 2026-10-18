@@ -1,0 +1,7 @@
+<library path="servo_moteur">
+  <class name="servo_moteur/ServoInterface"
+         type="servo_moteur::ServoInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Hardware interface pour servomoteurs Pan/Tilt.</description>
+  </class>
+</library>

@@ -1,0 +1,16 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    head_controller:
+      type: forward_command_controller/ForwardCommandController
+
+head_controller:
+  ros__parameters:
+    joints:
+      - neck_pan_joint
+      - neck_tilt_joint
+    interface_name: position

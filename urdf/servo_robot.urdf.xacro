@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="servo_robot">
+  
+  <xacro:include filename="servo_control.xacro" />
+
+  <link name="base_link"/>
+
+  <joint name="neck_pan_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="neck_pan_link"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="1.0" velocity="1.0"/>
+  </joint>
+  <link name="neck_pan_link"/>
+
+  <joint name="neck_tilt_joint" type="revolute">
+    <parent link="neck_pan_link"/>
+    <child link="neck_tilt_link"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="1.0" velocity="1.0"/>
+  </joint>
+  <link name="neck_tilt_link"/>
+
+</robot>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <ros2_control name="ServoHeadSystem" type="system">
+    <hardware>
+      <plugin>servo_moteur/ServoInterface</plugin>
+      <param name="device">/dev/ttyACM0</param>
+    </hardware>
+    <joint name="neck_pan_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="neck_tilt_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+</robot>
